@@ -1,8 +1,6 @@
 /*
 *   DKU Operating System Lab
 *           Lab2 (Vehicle production Problem)
-*           Student id : 32191556
-*           Student name : Park kyungmi
 *
 *   lab2_sync.c :
 *       - lab2 main file.
