@@ -1,4 +1,4 @@
-/*mycp.c : copy from a file and past it into another file, by 32191556 from Dankook Univ. SW, HW3 for SP */
+/*mycp.c : copy from a file and past it into another file */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
