@@ -1,8 +1,6 @@
 /*
 *	DKU Operating System Lab
 *	    Lab1 (Scheduler Algorithm Simulator)
-*	    Student id : 32191556
-*	    Student name : 박경미(Park Kyungmi)
 *
 *   lab1_sched_types.h :
 *       - lab1 header file.
