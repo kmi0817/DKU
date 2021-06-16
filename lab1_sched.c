@@ -1,7 +1,6 @@
 /*
 *	DKU Operating System Lab
 *	    Lab1 (Scheduler Algorithm Simulator)
-*	    Student name : 박경미 (Park Kyungmi)
 *
 *   lab1_sched.c :
 *       - Lab1 source file.
