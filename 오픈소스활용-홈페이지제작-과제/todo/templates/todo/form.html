@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <title>to do list</title>
+
+        <style>
+            a {text-decoration: none; color: gray}
+            body {
+                text-align: center;
+            }
+            .btn {
+                border-radius: 5px;
+                border: 1px solid gray;
+                width: 70px;
+                height: 30px;
+                background-color: whitesmoke;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1><a href="{% url 'todo:index' %}">&ltTo do list&gt</a></h1>
+        <br>
+        <form action="" method='POST'>
+            {% csrf_token %}
+            {{ form }}
+            <br><br>
+            <input type='submit' class='btn' value="완료">
+        </form>
+    </body>
+</html>

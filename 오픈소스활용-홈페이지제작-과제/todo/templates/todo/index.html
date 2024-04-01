@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <title>to do list</title>
+
+        <style>
+            a {
+                display : inline-block;
+                text-decoration: none;
+                color: gray;
+            }
+            body {
+                text-align: center;
+            }
+            table {
+                display: inline-block;
+                border-collapse: collapse;
+                width: 60%;
+            }
+            td {
+                border: 1px solid gray;
+                text-align: center;
+                padding: 10px;
+                height: 20px;
+            }
+            .info {
+                background-color: whitesmoke;
+            }
+            .btn {
+                border-radius: 5px;
+                border: 1px solid gray;
+                width: 70px;
+                height: 30px;
+                background-color: whitesmoke;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1><a href="{% url 'todo:index' %}">&ltTo do list&gt</a></h1>
+        {% if course_list %}
+        <form method='get'>
+            {{cFilter.form}}
+            <input type='submit' class='btn' value='검색'>
+            <a href="{% url 'todo:createForm' %}"><input type='button' class='btn' value='추가'></a>
+        </form>
+        <br>
+        <table>
+            <tr>
+            <td class='info'>카테고리</td>
+            <td class='info'>목표</td>
+            <td class='info'>내용</td>
+            <td class='info'>완료</td>
+            </tr>
+            {% for course in course_list %}
+            {% for hw in course.homework_set.all %}
+            <tr>
+                <td>{{course.course_name}}</a>
+                </td>
+                <td>
+                    <a href="{% url 'todo:detail' hw.id %}">{{ hw.title }}</a>
+                </td>
+                <td>{{ hw.desc }}</td>
+                <td>{{ hw.done }}</td>
+            </tr>
+            {% endfor %}
+            {% endfor %}
+        </table>
+    {% else %}
+    <p>No courses are available.</p>
+    {% endif %}
+    </body>
+</html>
